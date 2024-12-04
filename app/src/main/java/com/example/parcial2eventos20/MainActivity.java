@@ -15,9 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnHorario = findViewById(R.id.btnHorario);
-        btnEventos = findViewById(R.id.btnEventos);
-        btnFarmacias = findViewById(R.id.btnFarmacias);
+        // Inicializar botones
+        btnHorario = findViewById(R.id.btn_horario);
+        btnEventos = findViewById(R.id.btn_eventos);
+        btnFarmacias = findViewById(R.id.btn_farmacias);
 
         // Navegar a Actividad Horarios
         btnHorario.setOnClickListener(new View.OnClickListener() {

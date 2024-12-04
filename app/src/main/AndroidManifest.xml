@@ -18,7 +18,8 @@
         <!-- Actividad principal (Pantalla principal) -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -28,18 +29,20 @@
         <!-- Actividad para horarios -->
         <activity
             android:name=".HorarioActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/horario_activity_label" />
 
         <!-- Actividad para eventos -->
         <activity
             android:name=".EventosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/eventos_activity_label" />
 
         <!-- Actividad para farmacias -->
         <activity
             android:name=".FarmaciasActivity"
-            android:exported="false" />
-
+            android:exported="false"
+            android:label="@string/farmacias_activity_label" />
 
     </application>
 </manifest>

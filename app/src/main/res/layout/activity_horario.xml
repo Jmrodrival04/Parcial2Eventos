@@ -6,36 +6,44 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Campo para la asignatura -->
     <EditText
-        android:id="@+id/etAsignatura"
+        android:id="@+id/et_asignatura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Asignatura"
-        android:marginBottom="8dp" />
+        android:inputType="text" />
 
+    <!-- Campo para el día -->
     <EditText
-        android:id="@+id/etDia"
+        android:id="@+id/et_dia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Día"
-        android:marginBottom="8dp" />
+        android:inputType="text"
+        android:layout_marginTop="8dp" />
 
+    <!-- Campo para la hora -->
     <EditText
-        android:id="@+id/etHora"
+        android:id="@+id/et_hora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Hora"
-        android:marginBottom="16dp" />
+        android:inputType="time"
+        android:layout_marginTop="8dp" />
 
+    <!-- Botón para agregar horario -->
     <Button
-        android:id="@+id/btnAgregarHorario"
+        android:id="@+id/btn_agregar_horario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Agregar Horario"
-        android:marginBottom="16dp" />
+        android:layout_marginTop="16dp" />
 
+    <!-- Lista de horarios -->
     <ListView
-        android:id="@+id/listaHorarios"
+        android:id="@+id/lista_horarios"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

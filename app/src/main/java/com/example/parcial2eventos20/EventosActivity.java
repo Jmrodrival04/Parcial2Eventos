@@ -6,9 +6,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.widget.EditText;
+
 import java.util.ArrayList;
 
 public class EventosActivity extends AppCompatActivity {
@@ -23,8 +26,8 @@ public class EventosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventos);
 
-        btnAgregarEvento = findViewById(R.id.btnAgregarEvento);
-        listaEventos = findViewById(R.id.listaEventos);
+        btnAgregarEvento = findViewById(R.id.btn_agregar_evento);
+        listaEventos = findViewById(R.id.lista_eventos);
 
         // Inicializar lista y adaptador
         eventos = new ArrayList<>();
@@ -46,11 +49,11 @@ public class EventosActivity extends AppCompatActivity {
         View dialogView = getLayoutInflater().inflate(R.layout.dialog_agregar_evento, null);
 
         // Referencias a los EditText y el botón del diálogo
-        final EditText etNombreEvento = dialogView.findViewById(R.id.etNombreEvento);
-        final EditText etDescripcionEvento = dialogView.findViewById(R.id.etDescripcionEvento);
-        final EditText etFechaEvento = dialogView.findViewById(R.id.etFechaEvento);
-        final EditText etPrecioEvento = dialogView.findViewById(R.id.etPrecioEvento);
-        final Button btnGuardarEvento = dialogView.findViewById(R.id.btnGuardarEvento);
+        final EditText etNombreEvento = dialogView.findViewById(R.id.et_nombre_evento);
+        final EditText etDescripcionEvento = dialogView.findViewById(R.id.et_descripcion_evento);
+        final EditText etFechaEvento = dialogView.findViewById(R.id.et_fecha_evento);
+        final EditText etPrecioEvento = dialogView.findViewById(R.id.et_precio_evento);
+        final Button btnGuardarEvento = dialogView.findViewById(R.id.btn_guardar_evento);
 
         // Configurar el diseño del diálogo
         builder.setView(dialogView);
@@ -72,7 +75,8 @@ public class EventosActivity extends AppCompatActivity {
                     Toast.makeText(EventosActivity.this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
                 } else {
                     // Agregar el evento a la lista
-                    String evento = nombre + " - " + descripcion + " - " + fecha + " - " + precio;
+                    String evento = "Nombre: " + nombre + "\nDescripción: " + descripcion +
+                            "\nFecha: " + fecha + "\nPrecio: $" + precio;
                     eventos.add(evento);
                     adapter.notifyDataSetChanged();
                     dialog.dismiss();

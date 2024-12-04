@@ -23,16 +23,19 @@ public class HorarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horario);
 
-        etAsignatura = findViewById(R.id.etAsignatura);
-        etDia = findViewById(R.id.etDia);
-        etHora = findViewById(R.id.etHora);
-        btnAgregarHorario = findViewById(R.id.btnAgregarHorario);
-        listaHorarios = findViewById(R.id.listaHorarios);
+        // Inicializar vistas
+        etAsignatura = findViewById(R.id.et_asignatura);
+        etDia = findViewById(R.id.et_dia);
+        etHora = findViewById(R.id.et_hora);
+        btnAgregarHorario = findViewById(R.id.btn_agregar_horario);
+        listaHorarios = findViewById(R.id.lista_horarios);
 
+        // Inicializar la lista y el adaptador
         horarios = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, horarios);
         listaHorarios.setAdapter(adapter);
 
+        // Configurar el botón para agregar horarios
         btnAgregarHorario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,9 +49,12 @@ public class HorarioActivity extends AppCompatActivity {
                     String horario = asignatura + " - " + dia + " - " + hora;
                     horarios.add(horario);
                     adapter.notifyDataSetChanged();
+
+                    // Limpiar los campos de entrada
                     etAsignatura.setText("");
                     etDia.setText("");
                     etHora.setText("");
+
                     Toast.makeText(HorarioActivity.this, "Horario agregado", Toast.LENGTH_SHORT).show();
                 }
             }

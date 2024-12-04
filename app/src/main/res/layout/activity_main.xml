@@ -4,26 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="16dp">
 
+    <!-- Botón Horarios -->
     <Button
-        android:id="@+id/btnHorario"
+        android:id="@+id/btn_horario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gestionar Horarios"
-        android:marginBottom="16dp" />
+        android:text="Gestión de Horarios"
+        android:layout_marginBottom="16dp" />
 
+    <!-- Botón Eventos -->
     <Button
-        android:id="@+id/btnEventos"
+        android:id="@+id/btn_eventos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gestionar Eventos"
-        android:marginBottom="16dp" />
+        android:text="Gestión de Eventos"
+        android:layout_marginBottom="16dp" />
 
+    <!-- Botón Farmacias -->
     <Button
-        android:id="@+id/btnFarmacias"
+        android:id="@+id/btn_farmacias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Farmacias Zaragoza" />
+        android:text="Farmacias de Turno" />
 </LinearLayout>

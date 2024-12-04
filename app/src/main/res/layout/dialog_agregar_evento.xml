@@ -6,36 +6,46 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Campo para el nombre del evento -->
     <EditText
-        android:id="@+id/etNombreEvento"
+        android:id="@+id/et_nombre_evento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre del Evento"
-        android:marginBottom="8dp" />
+        android:hint="Nombre del evento"
+        android:inputType="text" />
 
+    <!-- Campo para la descripción del evento -->
     <EditText
-        android:id="@+id/etDescripcionEvento"
+        android:id="@+id/et_descripcion_evento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descripción"
-        android:marginBottom="8dp" />
+        android:hint="Descripción del evento"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="8dp" />
 
+    <!-- Campo para la fecha del evento -->
     <EditText
-        android:id="@+id/etFechaEvento"
+        android:id="@+id/et_fecha_evento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Fecha (dd/MM/yyyy)"
-        android:marginBottom="8dp" />
+        android:hint="Fecha del evento (DD/MM/AAAA)"
+        android:inputType="date"
+        android:layout_marginTop="8dp" />
 
+    <!-- Campo para el precio del evento -->
     <EditText
-        android:id="@+id/etPrecioEvento"
+        android:id="@+id/et_precio_evento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Precio" />
+        android:hint="Precio del evento"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="8dp" />
 
+    <!-- Botón para guardar el evento -->
     <Button
-        android:id="@+id/btnGuardarEvento"
+        android:id="@+id/btn_guardar_evento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar" />
+        android:text="Guardar Evento"
+        android:layout_marginTop="16dp" />
 </LinearLayout>
